@@ -1,0 +1,164 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #004d40, #00796b);
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navlist ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navlist ul li {
+    display: inline;
+}
+
+.navlist ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navlist ul li a:hover {
+    color: #cfd8dc;
+}
+
+main {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.rural-empowerment {
+    background-color: #e0f2f1;
+background-image: url(backg.png);
+padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.rural-empowerment h2 {
+    font-size: 32px;
+    color:rgb(226, 175, 229);
+    
+}
+
+.rural-empowerment p {
+    font-size: 18px;
+    margin: 20px 0;
+    color:rgb(246, 226, 238);
+    
+}
+
+.rural-empowerment img {
+    margin-top: 20px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    opacity:0;
+}
+
+.description {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.description h2 {
+    font-size: 28px;
+    color: #004d40;
+}
+
+.description p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.description ol {
+    text-align: left;
+    padding-left: 20px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.flowchart {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.flowchart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flowchart-step {
+    padding: 20px;
+    margin: 15px 0;
+    border: 2px solid #004d40;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flowchart-step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    font-size: 24px;
+    color: #004d40;
+}
+
+.ai-solution {
+    padding: 50px;
+    background-color: #e0f2f1;
+    text-align: center;
+}
+
+.ai-solution h2 {
+    color: #004d40;
+    font-size: 28px;
+}
+
+.ai-solution p ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

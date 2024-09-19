@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8; /* Light background for contrast */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+/* Updated Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #004d40, #004d40); /* Deep teal */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navlist ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navlist li {
+    margin-left: 30px;
+}
+
+.navlist a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navlist a:hover {
+    color: #ffcc00; /* Gold accent */
+}
+
+/* Form and Main Container Styling */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+}
+
+.mentor-auth-form {
+    max-width: 600px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.mentor-auth-form h2 {
+    margin-bottom: 20px;
+    color: #004d40; /* Deep teal */
+}
+
+.mentor-auth-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+.mentor-auth-form input[type="file"],
+.mentor-auth-form input[type="link"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.mentor-auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004d40; /* Deep teal */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mentor-auth-form button:hover {
+    background-color: #003d33; /* Darker shade of deep teal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.auth-image {
+    max-width: 500px;
+}
+
+.auth-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
