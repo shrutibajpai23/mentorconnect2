@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Scheduling Calendar</title>
+    <link rel="stylesheet" href="https://unpkg.com/fullcalendar@5.10.1/main.min.css">
+    <link rel="stylesheet" href="calendar.css">
+    <script src="https://unpkg.com/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="https://unpkg.com/@fullcalendar/daygrid@5.10.1/main.min.js"></script>
+    <script src="https://unpkg.com/@fullcalendar/timegrid@5.10.1/main.min.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Mentor Connect</a>
+            </div>
+            <nav class="navlist">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="calendar-container">
+        <h2>Book Your Mentoring Session</h2>
+        <div id="calendar"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var bookedSlots = []; // Array to track booked slots
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'timeGridWeek',
+                selectable: true,
+                slotMinTime: '09:00:00',
+                slotMaxTime: '18:00:00',
+                slotDuration: '00:30:00',
+                slotEventOverlap: false,
+                selectOverlap: false,
+                themeSystem: 'standard',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'timeGridDay,timeGridWeek'
+                },
+                select: function(info) {
+                    const selectedDateTime = info.startStr;
+
+                    // Check if the selected slot is already booked
+                    if (bookedSlots.includes(selectedDateTime)) {
+                        alert('This slot is already booked.');
+                    } else {
+                        // Ask the user to confirm booking
+                        const confirmBooking = confirm('Do you want to book this slot?');
+                        if (confirmBooking) {
+                            bookedSlots.push(selectedDateTime); // Mark slot as booked
+                            alert('Booking confirmed for: ' + selectedDateTime);
+
+                            // Display the "Booked" status in the calendar
+                            calendar.addEvent({
+                                title: 'Booked',
+                                start: selectedDateTime,
+                                allDay: false,
+                                color: '#ff6961', // Red color to mark booked slot
+                            });
+
+                            // Simulate sending booking data to the backend
+                            fetch('/book-mentor', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                    mentorId: '1234',   // Example mentor ID
+                                    menteeId: '5678',   // Example mentee ID
+                                    dateTime: selectedDateTime
+                                }),
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                console.log('Booking data saved.');
+                            })
+                            .catch(error => {
+                                console.error('Booking failed: ' + error.message);
+                            });
+                        }
+                    }
+                },
+                events: function(fetchInfo, successCallback, failureCallback) {
+                    // Render the booked slots from backend or array (here it's a mockup)
+                    let events = bookedSlots.map(slot => ({
+                        title: 'Booked',
+                        start: slot,
+                        allDay: false,
+                        color: '#ff6961' // Red color for booked event
+                    }));
+                    successCallback(events);
+                },
+                dayCellDidMount: function(info) {
+                    info.el.style.backgroundColor = '#e8f5e9'; // Light greenish background for cells
+                }
+            });
+
+            calendar.render();
+        });
+    </script>
+</body>
+</html>

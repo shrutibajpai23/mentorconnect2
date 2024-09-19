@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Mentors</title>
+    <link rel="stylesheet" href="chatpage.css">
+    <link rel="stylesheet" href="chatpage.js">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Mentor Connect</div>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="login.html">Login</a>
+                <a href="talk-to-mentor.html">Talk to Mentor</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="chat-container">
+            <!-- Mentor List -->
+            <aside class="mentor-list">
+                <div class="mentor-card" onclick="selectMentor('Mentor 1')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZnLps_-gtfSajAEQfN3TUIa-FEjuN9dTy7w&s" alt="Mentor 1">
+                    <p>Mentor 1</p>
+                </div>
+                <div class="mentor-card" onclick="selectMentor('Mentor 2')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS44n5iEoVH6Iygtzq8tP6a_sJqBeddOjVb4HXVYURvKUq5-ztfANvEH66Fe7aQX8I8tA4&usqp=CAU" alt="Mentor 2">
+                    <p>Mentor 2</p>
+                </div>
+                <div class="mentor-card" onclick="selectMentor('Mentor 3')">
+                    <img src="https://img.freepik.com/premium-photo/indian-teacher-with-student-class-room_130568-506.jpg" alt="Mentor 3">
+                    <p>Mentor 3</p>
+                </div>
+                <div class="mentor-card" onclick="selectMentor('Mentor 4')">
+                    <img src="https://img.freepik.com/premium-photo/indian-teacher-with-student-class-room_130568-505.jpg" alt="Mentor 4">
+                    <p>Mentor 4</p>
+                </div>
+                <div class="mentor-card" onclick="selectMentor('Mentor 5')">
+                    <img src="https://t4.ftcdn.net/jpg/06/03/30/61/360_F_603306193_6l3s7RKhwq6VbvRcb4kJ51Q1pDqhpANL.jpg" alt="Mentor 5">
+                    <p>Mentor 5</p>
+                </div>
+                <div class="mentor-card" onclick="selectMentor('Mentor 6')">
+                    <img src="https://t3.ftcdn.net/jpg/08/91/76/12/360_F_891761210_uA6MJW4sobOckYdKiUw4ZxW1NDpq4EjW.jpg" alt="Mentor 6">
+                    <p>Mentor 6</p>
+                </div>
+                <div class="mentor-card" onclick="selectMentor('Mentor 7')">
+                    <img src="https://img.freepik.com/free-photo/woman-teaching-classroom_23-2151696377.jpg" alt="Mentor 7">
+                    <p>Mentor 7</p>
+                </div>
+            </aside>
+
+            <!-- Chat Area -->
+            <section class="chat-area">
+                <div class="chat-box" id="chat-box">
+                    <div class="message received">Hello! How can I help you today?</div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button id="send-button">Send</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <footer class="contact-footer">
+        <p>Contact us at <a href="mailto:support@mentorconnect.com">support@mentorconnect.com</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="chat.js"></script>
+</body>
+</html>

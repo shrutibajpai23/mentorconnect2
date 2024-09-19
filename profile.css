@@ -1,0 +1,232 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+section
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Mentor Profile Section */
+.mentor-profile {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 3px solid #3bbca7;
+}
+
+/* Mentor Details */
+.mentor-details {
+    text-align: center;
+}
+
+.mentor-img {
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.mentor-details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #004d40;
+}
+
+.mentor-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #004d40;
+}
+
+/* Fields of Expertise */
+.fields-help {
+    text-align: left;
+}
+
+.fields-help h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #004d40;
+}
+
+.fields-help ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.fields-help ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Achievements Section */
+.mentor-achievements {
+    text-align: left;
+}
+
+.mentor-achievements h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #004d40;
+}
+
+.mentor-achievements ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.mentor-achievements ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Mentor Impact Section */
+.mentor-impact {
+    text-align: left;
+}
+
+.mentor-impact h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #004d40;
+}
+
+.mentor-impact p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Mentee Stats Section */
+.mentee-stats {
+    text-align: left;
+}
+
+.mentee-stats h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #004d40;
+}
+
+.mentee-stats p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Schedule Button */
+.schedule-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.schedule-button {
+    display: inline-block;
+    background-color: #004d40;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-button:hover {
+    background-color: #003d33;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+}
+
+/* original navbar header */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+/* Updated Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #004d40, #004d40); /* Deep teal */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navlist ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navlist li {
+    margin-left: 30px;
+}
+
+.navlist a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navlist a:hover {
+    color: #ffcc00; /* Gold accent */
+}

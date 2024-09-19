@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Light greenish background */
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #004d40;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+.calendar-container {
+    margin: 50px auto;
+    width: 60%;
+    text-align: center;
+}
+
+h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #c8e6c9; /* Light greenish background for the calendar */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* header section*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+/* Updated Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #004d40, #004d40); /* Deep teal */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navlist ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navlist li {
+    margin-left: 30px;
+}
+
+.navlist a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navlist a:hover {
+    color: #ffcc00; /* Gold accent */
+}
